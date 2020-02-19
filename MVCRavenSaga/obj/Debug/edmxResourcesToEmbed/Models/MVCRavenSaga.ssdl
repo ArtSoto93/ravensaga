@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GameDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Apoyos">
+    <Key>
+      <PropertyRef Name="IDApoyo" />
+    </Key>
+    <Property Name="IDApoyo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUnitA" Type="int" Nullable="false" />
+    <Property Name="IDUnitB" Type="int" Nullable="false" />
+    <Property Name="IDElemA" Type="int" Nullable="false" />
+    <Property Name="IDElemB" Type="int" Nullable="false" />
+    <Property Name="Romance" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArbolClases">
+    <Key>
+      <PropertyRef Name="IDClase" />
+    </Key>
+    <Property Name="IDClase" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Clase" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HPMax" Type="int" Nullable="false" />
+    <Property Name="FuerzaMax" Type="int" Nullable="false" />
+    <Property Name="MagiaMax" Type="int" Nullable="false" />
+    <Property Name="HabMax" Type="int" Nullable="false" />
+    <Property Name="VelMax" Type="int" Nullable="false" />
+    <Property Name="SuerMax" Type="int" Nullable="false" />
+    <Property Name="DefMax" Type="int" Nullable="false" />
+    <Property Name="ResMax" Type="int" Nullable="false" />
+    <Property Name="Promocion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Armas">
+    <Key>
+      <PropertyRef Name="IDObjeto" />
+    </Key>
+    <Property Name="IDObjeto" Type="int" Nullable="false" />
+    <Property Name="TipoArma" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mt" Type="int" Nullable="false" />
+    <Property Name="Hit" Type="int" Nullable="false" />
+    <Property Name="Crit" Type="int" Nullable="false" />
+    <Property Name="Wt" Type="int" Nullable="false" />
+    <Property Name="ArmaPersonal" Type="bit" Nullable="false" />
+    <Property Name="IDClase" Type="int" Nullable="false" />
+    <Property Name="Imagen" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Elementos">
+    <Key>
+      <PropertyRef Name="IDElemento" />
+    </Key>
+    <Property Name="IDElemento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Elemento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Bonificaciones" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Unidades">
+    <Key>
+      <PropertyRef Name="IDUnit" />
+    </Key>
+    <Property Name="IDUnit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDClase" Type="int" Nullable="false" />
+    <Property Name="IDPromocion" Type="int" Nullable="false" />
+    <Property Name="Nivel" Type="int" Nullable="false" />
+    <Property Name="HP" Type="int" Nullable="false" />
+    <Property Name="Fuerza" Type="int" Nullable="false" />
+    <Property Name="Magia" Type="int" Nullable="false" />
+    <Property Name="Habilidad" Type="int" Nullable="false" />
+    <Property Name="Velocidad" Type="int" Nullable="false" />
+    <Property Name="Suerte" Type="int" Nullable="false" />
+    <Property Name="Defensa" Type="int" Nullable="false" />
+    <Property Name="Resistencia" Type="int" Nullable="false" />
+    <Property Name="HPGr" Type="int" Nullable="false" />
+    <Property Name="FueGr" Type="int" Nullable="false" />
+    <Property Name="MagGr" Type="int" Nullable="false" />
+    <Property Name="HabGr" Type="int" Nullable="false" />
+    <Property Name="VelGr" Type="int" Nullable="false" />
+    <Property Name="SuerGr" Type="int" Nullable="false" />
+    <Property Name="DefGr" Type="int" Nullable="false" />
+    <Property Name="ResGr" Type="int" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="IDElemento" Type="int" Nullable="false" />
+    <Property Name="Imagen" Type="varchar(max)" Nullable="false" />
+    <Property Name="Promovido" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Apoyos_ElementosA">
+    <End Role="Elementos" Type="Self.Elementos" Multiplicity="1" />
+    <End Role="Apoyos" Type="Self.Apoyos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elementos">
+        <PropertyRef Name="IDElemento" />
+      </Principal>
+      <Dependent Role="Apoyos">
+        <PropertyRef Name="IDElemA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Apoyos_ElementosB">
+    <End Role="Elementos" Type="Self.Elementos" Multiplicity="1" />
+    <End Role="Apoyos" Type="Self.Apoyos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elementos">
+        <PropertyRef Name="IDElemento" />
+      </Principal>
+      <Dependent Role="Apoyos">
+        <PropertyRef Name="IDElemB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Apoyos_UnidadesA">
+    <End Role="Unidades" Type="Self.Unidades" Multiplicity="1" />
+    <End Role="Apoyos" Type="Self.Apoyos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidades">
+        <PropertyRef Name="IDUnit" />
+      </Principal>
+      <Dependent Role="Apoyos">
+        <PropertyRef Name="IDUnitA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Apoyos_UnidadesB">
+    <End Role="Unidades" Type="Self.Unidades" Multiplicity="1" />
+    <End Role="Apoyos" Type="Self.Apoyos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidades">
+        <PropertyRef Name="IDUnit" />
+      </Principal>
+      <Dependent Role="Apoyos">
+        <PropertyRef Name="IDUnitB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Armas_ArbolClases">
+    <End Role="ArbolClases" Type="Self.ArbolClases" Multiplicity="1" />
+    <End Role="Armas" Type="Self.Armas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArbolClases">
+        <PropertyRef Name="IDClase" />
+      </Principal>
+      <Dependent Role="Armas">
+        <PropertyRef Name="IDClase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Unidades_ArbolClases">
+    <End Role="ArbolClases" Type="Self.ArbolClases" Multiplicity="1" />
+    <End Role="Unidades" Type="Self.Unidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArbolClases">
+        <PropertyRef Name="IDClase" />
+      </Principal>
+      <Dependent Role="Unidades">
+        <PropertyRef Name="IDClase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Unidades_ArbolClases1">
+    <End Role="ArbolClases" Type="Self.ArbolClases" Multiplicity="1" />
+    <End Role="Unidades" Type="Self.Unidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArbolClases">
+        <PropertyRef Name="IDClase" />
+      </Principal>
+      <Dependent Role="Unidades">
+        <PropertyRef Name="IDPromocion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Unidades_Elementos">
+    <End Role="Elementos" Type="Self.Elementos" Multiplicity="1" />
+    <End Role="Unidades" Type="Self.Unidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elementos">
+        <PropertyRef Name="IDElemento" />
+      </Principal>
+      <Dependent Role="Unidades">
+        <PropertyRef Name="IDElemento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GameDBModelStoreContainer">
+    <EntitySet Name="Apoyos" EntityType="Self.Apoyos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArbolClases" EntityType="Self.ArbolClases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Armas" EntityType="Self.Armas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Elementos" EntityType="Self.Elementos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Unidades" EntityType="Self.Unidades" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Apoyos_ElementosA" Association="Self.FK_Apoyos_ElementosA">
+      <End Role="Elementos" EntitySet="Elementos" />
+      <End Role="Apoyos" EntitySet="Apoyos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Apoyos_ElementosB" Association="Self.FK_Apoyos_ElementosB">
+      <End Role="Elementos" EntitySet="Elementos" />
+      <End Role="Apoyos" EntitySet="Apoyos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Apoyos_UnidadesA" Association="Self.FK_Apoyos_UnidadesA">
+      <End Role="Unidades" EntitySet="Unidades" />
+      <End Role="Apoyos" EntitySet="Apoyos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Apoyos_UnidadesB" Association="Self.FK_Apoyos_UnidadesB">
+      <End Role="Unidades" EntitySet="Unidades" />
+      <End Role="Apoyos" EntitySet="Apoyos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Armas_ArbolClases" Association="Self.FK_Armas_ArbolClases">
+      <End Role="ArbolClases" EntitySet="ArbolClases" />
+      <End Role="Armas" EntitySet="Armas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Unidades_ArbolClases" Association="Self.FK_Unidades_ArbolClases">
+      <End Role="ArbolClases" EntitySet="ArbolClases" />
+      <End Role="Unidades" EntitySet="Unidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Unidades_ArbolClases1" Association="Self.FK_Unidades_ArbolClases1">
+      <End Role="ArbolClases" EntitySet="ArbolClases" />
+      <End Role="Unidades" EntitySet="Unidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Unidades_Elementos" Association="Self.FK_Unidades_Elementos">
+      <End Role="Elementos" EntitySet="Elementos" />
+      <End Role="Unidades" EntitySet="Unidades" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

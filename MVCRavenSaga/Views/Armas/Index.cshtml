@@ -1,0 +1,81 @@
+﻿@model IEnumerable<MVCRavenSaga.Models.Armas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDArma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArmaPersonal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDClase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDArma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Crit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArmaPersonal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDClase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imagen)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDObjeto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDObjeto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDObjeto })
+        </td>
+    </tr>
+}
+
+</table>

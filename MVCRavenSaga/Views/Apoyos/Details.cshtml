@@ -1,0 +1,58 @@
+﻿@model MVCRavenSaga.Models.Apoyos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Apoyos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Romance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Romance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Elementos.Elemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elementos.Elemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Elementos1.Elemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elementos1.Elemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unidades.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unidades.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unidades1.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unidades1.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDApoyo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

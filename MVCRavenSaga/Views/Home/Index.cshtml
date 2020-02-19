@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Promedios al máximo nivel</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Nombre</th>
+                <th>Nivel</th>
+                <th>HP</th>
+                <th>Fuerza</th>
+                <th>Magia</th>
+                <th>Habilidad</th>
+                <th>Velocidad</th>
+                <th>Suerte</th>
+                <th>Defensa</th>
+                <th>Resistencia</th>
+
+            </tr>
+            @foreach (var item in ViewBag.PromediosL)
+            {
+                <tr>
+                    <td>
+                        @item.Nombre 
+                    </td>
+                    <td>
+                        @item.Nivel
+                    </td>
+                    <td>
+                        @item.HP
+                    </td>
+                    <td>
+                        @item.Fuerza
+                    </td>
+                    <td>
+                        @item.Magia
+                    </td>
+                    <td>
+                        @item.Habilidad
+                    </td>
+                    <td>
+                        @item.Velocidad
+                    </td>
+                    <td>
+                        @item.Suerte
+                    </td>
+                    <td>
+                        @item.Defensa
+                    </td>
+                    <td>
+                        @item.Resistencia
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

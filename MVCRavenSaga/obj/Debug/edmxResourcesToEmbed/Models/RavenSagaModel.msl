@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GameDBModelStoreContainer" CdmEntityContainer="GameDBEntities">
+    <EntitySetMapping Name="Apoyos">
+      <EntityTypeMapping TypeName="GameDBModel.Apoyos">
+        <MappingFragment StoreEntitySet="Apoyos">
+          <ScalarProperty Name="IDApoyo" ColumnName="IDApoyo" />
+          <ScalarProperty Name="IDUnitA" ColumnName="IDUnitA" />
+          <ScalarProperty Name="IDUnitB" ColumnName="IDUnitB" />
+          <ScalarProperty Name="IDElemA" ColumnName="IDElemA" />
+          <ScalarProperty Name="IDElemB" ColumnName="IDElemB" />
+          <ScalarProperty Name="Romance" ColumnName="Romance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArbolClases">
+      <EntityTypeMapping TypeName="IsTypeOf(GameDBModel.ArbolClases)">
+        <MappingFragment StoreEntitySet="ArbolClases">
+          <ScalarProperty Name="IDClase" ColumnName="IDClase" />
+          <ScalarProperty Name="Registro" ColumnName="Registro" />
+          <ScalarProperty Name="ResMax" ColumnName="ResMax" />
+          <ScalarProperty Name="DefMax" ColumnName="DefMax" />
+          <ScalarProperty Name="SuerMax" ColumnName="SuerMax" />
+          <ScalarProperty Name="VelMax" ColumnName="VelMax" />
+          <ScalarProperty Name="HabMax" ColumnName="HabMax" />
+          <ScalarProperty Name="MagiaMax" ColumnName="MagiaMax" />
+          <ScalarProperty Name="FuerzaMax" ColumnName="FuerzaMax" />
+          <ScalarProperty Name="HPMax" ColumnName="HPMax" />
+          <ScalarProperty Name="Clase" ColumnName="Clase" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Armas">
+      <EntityTypeMapping TypeName="GameDBModel.Armas">
+        <MappingFragment StoreEntitySet="Armas">
+          <ScalarProperty Name="IDObjeto" ColumnName="IDObjeto" />
+          <ScalarProperty Name="IDArma" ColumnName="IDArma" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Mt" ColumnName="Mt" />
+          <ScalarProperty Name="Hit" ColumnName="Hit" />
+          <ScalarProperty Name="Crit" ColumnName="Crit" />
+          <ScalarProperty Name="Wt" ColumnName="Wt" />
+          <ScalarProperty Name="ArmaPersonal" ColumnName="ArmaPersonal" />
+          <ScalarProperty Name="IDClase" ColumnName="IDClase" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Elementos">
+      <EntityTypeMapping TypeName="GameDBModel.Elementos">
+        <MappingFragment StoreEntitySet="Elementos">
+          <ScalarProperty Name="IDElemento" ColumnName="IDElemento" />
+          <ScalarProperty Name="Elemento" ColumnName="Elemento" />
+          <ScalarProperty Name="Bonificaciones" ColumnName="Bonificaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnidadesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(GameDBModel.Unidades)" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <MappingFragment StoreEntitySet="Unidades">
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="IDElemento" ColumnName="IDElemento" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="ResGr" ColumnName="ResGr" />
+          <ScalarProperty Name="DefGr" ColumnName="DefGr" />
+          <ScalarProperty Name="SuerGr" ColumnName="SuerGr" />
+          <ScalarProperty Name="VelGr" ColumnName="VelGr" />
+          <ScalarProperty Name="HabGr" ColumnName="HabGr" />
+          <ScalarProperty Name="MagGr" ColumnName="MagGr" />
+          <ScalarProperty Name="FueGr" ColumnName="FueGr" />
+          <ScalarProperty Name="HPGr" ColumnName="HPGr" />
+          <ScalarProperty Name="Resistencia" ColumnName="Resistencia" />
+          <ScalarProperty Name="Defensa" ColumnName="Defensa" />
+          <ScalarProperty Name="Suerte" ColumnName="Suerte" />
+          <ScalarProperty Name="Velocidad" ColumnName="Velocidad" />
+          <ScalarProperty Name="Habilidad" ColumnName="Habilidad" />
+          <ScalarProperty Name="Magia" ColumnName="Magia" />
+          <ScalarProperty Name="Fuerza" ColumnName="Fuerza" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="IDPromo" ColumnName="IDPromo" />
+          <ScalarProperty Name="IDClaseBase" ColumnName="IDClaseBase" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDUnit" ColumnName="IDUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UnidadesArbolClases" TypeName="GameDBModel.UnidadesArbolClases" StoreEntitySet="Unidades">
+      <EndProperty Name="ArbolClases">
+        <ScalarProperty Name="IDClase" ColumnName="IDClaseBase" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UnidadesArbolClases1" TypeName="GameDBModel.UnidadesArbolClases1" StoreEntitySet="Unidades">
+      <EndProperty Name="ArbolClases">
+        <ScalarProperty Name="IDClase" ColumnName="IDPromo" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

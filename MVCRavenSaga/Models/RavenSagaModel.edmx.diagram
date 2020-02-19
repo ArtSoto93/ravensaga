@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="db19f8ded1a54d998a33ff7a0917af70" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="GameDBModel.Apoyos" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameDBModel.ArbolClases" Width="1.5" PointX="2.875" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameDBModel.Armas" Width="1.5" PointX="5.625" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameDBModel.Elementos" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameDBModel.Unidades" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="GameDBModel.FK_Apoyos_ElementosA" ManuallyRouted="false" />
+        <AssociationConnector Association="GameDBModel.FK_Apoyos_ElementosB" ManuallyRouted="false" />
+        <AssociationConnector Association="GameDBModel.FK_Apoyos_UnidadesA" ManuallyRouted="false" />
+        <AssociationConnector Association="GameDBModel.FK_Apoyos_UnidadesB" ManuallyRouted="false" />
+        <AssociationConnector Association="GameDBModel.FK_Unidades_Elementos" ManuallyRouted="false" />
+        <AssociationConnector Association="GameDBModel.UnidadesArbolClases" />
+        <AssociationConnector Association="GameDBModel.UnidadesArbolClases1" />
+        <AssociationConnector Association="GameDBModel.FK_Apoyos_UnidadesA1" />
+        <AssociationConnector Association="GameDBModel.FK_Apoyos_UnidadesB1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

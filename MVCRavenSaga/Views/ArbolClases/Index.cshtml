@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MVCRavenSaga.Models.ArbolClases>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDClase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HPMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuerzaMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MagiaMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HabMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VelMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuerMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResMax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Promocion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDClase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HPMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FuerzaMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MagiaMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HabMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VelMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuerMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DefMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResMax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Promocion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IDClase })|
+            @Html.ActionLink("Details", "Details", new { id = item.IDClase }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IDClase })
+        </td>
+    </tr>
+}
+
+</table>

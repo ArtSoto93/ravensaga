@@ -1,0 +1,171 @@
+﻿@model IEnumerable<MVCRavenSaga.Models.Unidades>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+           Clase
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Promovido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nivel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fuerza)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Magia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Habilidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Velocidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Suerte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Defensa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HPGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FueGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MagGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HabGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VelGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SuerGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResGr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Elementos.Elemento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+        @if (item.Promovido != false)
+        {
+            @Html.DisplayFor(modelItem => item.ArbolClases.Clase)
+        }
+        else
+        {
+            @Html.DisplayFor(modelItem => item.ArbolClases.Clase)
+        }
+        <td>
+            @Html.DisplayFor(modelItem => item.Promovido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fuerza)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Magia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Habilidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Velocidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Suerte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Defensa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HPGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FueGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MagGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HabGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VelGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SuerGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DefGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResGr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaNacimiento)
+        </td>
+        <td>
+            @PictureShow.Imagen(item.Imagen, 150, 150)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Elementos.Elemento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDUnit }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDUnit }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDUnit })
+        </td>
+    </tr>
+}
+
+</table>

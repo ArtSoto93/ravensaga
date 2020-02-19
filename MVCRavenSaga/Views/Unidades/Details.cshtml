@@ -1,0 +1,218 @@
+﻿@model MVCRavenSaga.Models.Unidades
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Unidades</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDClaseBase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDClaseBase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaseBase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClaseBase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDPromo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDPromo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClaseActual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClaseActual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nivel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nivel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fuerza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fuerza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Magia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Magia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Habilidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Habilidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Velocidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Velocidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suerte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suerte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Defensa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Defensa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HPGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HPGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FueGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FueGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HabGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HabGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VelGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VelGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuerGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuerGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResGr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResGr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imagen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Elementos.Elemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elementos.Elemento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDUnit }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

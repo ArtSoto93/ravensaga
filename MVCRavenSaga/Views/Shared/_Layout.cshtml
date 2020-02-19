@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Raven Saga Database</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @Scripts.Render("~/bundles/js")
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Raven Saga DB", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalogos <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Ingresar Unidad", "Create", "Unidades")</li>
+                            <li>@Html.ActionLink("Ingresar Clase", "Create", "ArbolClases")</li>
+                            <li>@Html.ActionLink("Ingresar Arma", "Create", "Armas")</li>
+                            <li>@Html.ActionLink("Ingresar Afinidad Elemental", "Create", "Elemento")</li>
+                            <li>@Html.ActionLink("Ingresar Relación de Apoyo", "Create", "Apoyos")</li>
+                            <li role="separator" class="divider"></li>
+                            <li>@Html.ActionLink("Listado de Unidades", "Index", "Unidades")</li>
+                            <li>@Html.ActionLink("Listado de Clases", "Index", "ArbolClases")</li>
+                            <li>@Html.ActionLink("Listado de Armas", "Index", "Armas")</li>
+                            <li>@Html.ActionLink("Listado de Afinidades", "Index", "Elemento")</li>
+                            <li>@Html.ActionLink("Listado de Apoyos", "Index", "Apoyos")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - The Raven Saga Database</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

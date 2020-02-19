@@ -1,0 +1,90 @@
+﻿@model MVCRavenSaga.Models.Armas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Armas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDArma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDArma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Crit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Crit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArmaPersonal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArmaPersonal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDClase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDClase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imagen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDObjeto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
