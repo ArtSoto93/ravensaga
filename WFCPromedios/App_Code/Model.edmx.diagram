@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c770026cb0142fb8e4bf8bd3a1ae65e" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="RavenSaga.Apoyos" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RavenSaga.ArbolClases" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RavenSaga.Armas" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RavenSaga.Elementos" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RavenSaga.Unidades" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="RavenSaga.FK_Apoyos_ElementosA" ManuallyRouted="false" />
+        <AssociationConnector Association="RavenSaga.FK_Apoyos_ElementosB" ManuallyRouted="false" />
+        <AssociationConnector Association="RavenSaga.FK_Apoyos_UnidadesA" ManuallyRouted="false" />
+        <AssociationConnector Association="RavenSaga.FK_Apoyos_UnidadesB" ManuallyRouted="false" />
+        <AssociationConnector Association="RavenSaga.FK_Armas_ArbolClases" ManuallyRouted="false" />
+        <AssociationConnector Association="RavenSaga.FK_Unidades_ArbolClases" ManuallyRouted="false" />
+        <AssociationConnector Association="RavenSaga.FK_Unidades_ArbolClases1" ManuallyRouted="false" />
+        <AssociationConnector Association="RavenSaga.FK_Unidades_Elementos" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
